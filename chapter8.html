@@ -1,0 +1,537 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>コレクション · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-forkmegithub/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="chapter0.html" />
+    
+    
+    <link rel="prev" href="chapter7.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Scala勉強会
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="chapter1.html">
+            
+                <a href="chapter1.html">
+            
+                    
+                    Scalaの概要
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="chapter2.html">
+            
+                <a href="chapter2.html">
+            
+                    
+                    Scalaのメリット
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="chapter3.html">
+            
+                <a href="chapter3.html">
+            
+                    
+                    Scalaの環境構築
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="chapter4.html">
+            
+                <a href="chapter4.html">
+            
+                    
+                    Hello Scala World
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="chapter5.html">
+            
+                <a href="chapter5.html">
+            
+                    
+                    構文と式と文
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="chapter6.html">
+            
+                <a href="chapter6.html">
+            
+                    
+                    classとメソッドとフィールドとアクセス修飾子
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="chapter7.html">
+            
+                <a href="chapter7.html">
+            
+                    
+                    objectとcase class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9" data-path="chapter8.html">
+            
+                <a href="chapter8.html">
+            
+                    
+                    コレクション
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="chapter0.html">
+            
+                <a href="chapter0.html">
+            
+                    
+                    参考文献
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >コレクション</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x30B3;&#x30EC;&#x30AF;&#x30B7;&#x30E7;&#x30F3;">&#x30B3;&#x30EC;&#x30AF;&#x30B7;&#x30E7;&#x30F3;</h1>
+<hr>
+<p>Scala&#x306B;&#x306F;Array(&#x914D;&#x5217;)&#x3084;List(&#x30EA;&#x30B9;&#x30C8;)&#x3001;Map(&#x9023;&#x60F3;&#x914D;&#x5217;)&#x3001;Set(&#x96C6;&#x5408;)&#x3092;&#x6271;&#x3046;&#x305F;&#x3081;&#x306E;&#x30E9;&#x30A4;&#x30D6;&#x30E9;&#x30EA;&#x304C;&#x8C4A;&#x5BCC;&#x306B;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;</p>
+<p>&#x3053;&#x308C;&#x3089;&#x3092;&#x4F7F;&#x3044;&#x3053;&#x306A;&#x3059;&#x3053;&#x3068;&#x3067;Scala&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30DF;&#x30F3;&#x30B0;&#x306F;&#x5287;&#x7684;&#x306B;&#x697D;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;</p>
+<blockquote>
+<p>&#x30B3;&#x30EC;&#x30AF;&#x30B7;&#x30E7;&#x30F3;&#x306B;&#x306F;immutable(&#x4E0D;&#x5909;)&#x306A;&#x3082;&#x306E;&#x3068;mutable(&#x53EF;&#x5909;)&#x306A;&#x3082;&#x306E;&#x304C;&#x3042;&#x308B;&#x3053;&#x3068;&#x306B;&#x6CE8;&#x610F;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;</p>
+<blockquote>
+<p>immutable&#x306A;&#x30B3;&#x30EC;&#x30AF;&#x30B7;&#x30E7;&#x30F3;&#x3092;&#x4F7F;&#x3046;&#x30E1;&#x30EA;&#x30C3;&#x30C8;&#x306F;&#x591A;&#x304F;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;</p>
+<ul>
+<li>&#x518D;&#x5E30;&#x51E6;&#x7406;&#x3068;&#x306E;&#x76F8;&#x6027;&#x304C;&#x826F;&#x3044;</li>
+<li>&#x9AD8;&#x968E;&#x95A2;&#x6570;&#x3092;&#x7528;&#x3044;&#x3066;&#x7C21;&#x6F54;&#x306A;&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30DF;&#x30F3;&#x30B0;&#x3092;&#x66F8;&#x304F;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x308B;</li>
+<li>&#x4E00;&#x5EA6;&#x4F5C;&#x6210;&#x3057;&#x305F;&#x30B3;&#x30EC;&#x30AF;&#x30B7;&#x30E7;&#x30F3;&#x304C;&#x77E5;&#x3089;&#x306A;&#x3044;&#x3068;&#x3053;&#x308D;&#x3067;&#x5909;&#x66F4;&#x3055;&#x308C;&#x3066;&#x3044;&#x306A;&#x3044;&#x3053;&#x3068;&#x3092;&#x4FDD;&#x8A3C;&#x3067;&#x304D;&#x308B;</li>
+<li>&#x4E26;&#x884C;&#x306B;&#x52D5;&#x4F5C;&#x3059;&#x308B;&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x306E;&#x4E2D;&#x3067;&#x5B89;&#x5168;&#x306B;&#x53D7;&#x3051;&#x6E21;&#x3057;&#x304C;&#x3067;&#x304D;&#x308B;</li>
+</ul>
+</blockquote>
+</blockquote>
+<h2 id="array&#x914D;&#x5217;">Array(&#x914D;&#x5217;)</h2>
+<p>Array&#x306F;&#x4ED6;&#x306E;&#x8A00;&#x8A9E;&#x3068;&#x5927;&#x4F53;&#x304A;&#x306A;&#x3058;&#x3067;&#x3059;&#x3002;&#x307E;&#x305F;&#x8981;&#x7D20;&#x306E;&#x4E2D;&#x8EAB;&#x3092;&#x5909;&#x66F4;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</p>
+<blockquote>
+<p>Array&#x306F;mutable&#x3067;&#x3059;</p>
+</blockquote>
+<p>Array&#x306F;&#x6B21;&#x306E;&#x3088;&#x3046;&#x306B;&#x5BA3;&#x8A00;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</p>
+<blockquote>
+<p>(var/val) arr = Array(pram1, pram2, pram3, ..., pramN)</p>
+<blockquote>
+<p>new&#x306F;&#x5FC5;&#x8981;&#x306A;&#x3044;&#x3067;&#x3059;</p>
+</blockquote>
+</blockquote>
+<p>&#x8981;&#x7D20;&#x3078;&#x306E;&#x30A2;&#x30AF;&#x30BB;&#x30B9;&#x306F;&#x6B21;&#x306E;&#x3088;&#x3046;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;</p>
+<blockquote>
+<p>arr(indexNumber) = pram</p>
+</blockquote>
+<p>Array&#x306E;&#x9577;&#x3055;&#x306F;length&#x3067;&#x53D6;&#x5F97;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</p>
+<blockquote>
+<p>arr.length</p>
+</blockquote>
+<p>Array&#x306B;&#x306F;&#x3044;&#x304F;&#x3064;&#x304B;&#x306E;&#x7F60;&#x304C;&#x3042;&#x308B;&#x306E;&#x3067;&#x6CE8;&#x610F;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</p>
+<ul>
+<li>&#x8981;&#x7D20;&#x304C;&#x540C;&#x3058;&#x3067;&#x3082;equals&#x3067;true&#x306B;&#x306A;&#x3089;&#x306A;&#x3044;&#x3002;</li>
+<li>&#x751F;&#x6210;&#x3059;&#x308B;&#x3068;&#x304D;&#x306B;Class Tag&#x3068;&#x3044;&#x3046;&#x3082;&#x306E;&#x304C;&#x5FC5;&#x8981;</li>
+<li>etc...</li>
+</ul>
+<p>&#x3053;&#x308C;&#x3089;&#x306E;&#x4E8B;&#x60C5;&#x306B;&#x3088;&#x308A;&#x3001;Array&#x306F;&#x30D1;&#x30D5;&#x30A9;&#x30FC;&#x30DE;&#x30F3;&#x30B9;&#x4E0A;&#x5FC5;&#x8981;&#x306A;&#x5834;&#x5408;&#x4EE5;&#x5916;&#x306F;&#x3042;&#x307E;&#x308A;&#x7A4D;&#x6975;&#x7684;&#x306B;&#x4F7F;&#x3044;&#x307E;&#x305B;&#x3093;&#x3002;</p>
+<h2 id="range">Range</h2>
+<p>Range&#x306F;&#x7BC4;&#x56F2;&#x3092;&#x8868;&#x3059;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x3067;&#x3059;&#x3002;</p>
+<p>&#x76F4;&#x63A5;&#x540D;&#x524D;&#x3092;&#x6307;&#x5B9A;&#x3057;&#x3066;&#x547C;&#x3073;&#x51FA;&#x3059;&#x3088;&#x308A;&#x3001;to&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x3068;until&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x3092;&#x7528;&#x3044;&#x3066;&#x547C;&#x3073;&#x51FA;&#x3059;&#x3053;&#x3068;&#x304C;&#x591A;&#x3044;&#x3067;&#x3059;&#x3002;</p>
+<p>toString&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x3092;&#x4F7F;&#x3046;&#x3053;&#x3068;&#x3067;&#x3001;&#x305D;&#x306E;&#x7BC4;&#x56F2;&#x306E;&#x6570;&#x5024;&#x5217;&#x3092;List&#x306B;&#x5909;&#x63DB;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</p>
+<blockquote>
+<p>(1 to 5).toString</p>
+<p>(1 until 5).toString</p>
+<blockquote>
+<p>to&#x306F;n&#x301C;N&#x304B;&#x3064;N&#x3092;&#x542B;&#x3080;</p>
+<p>until&#x306F;n&#x301C;N&#x304B;&#x3064;N&#x3092;&#x542B;&#x307E;&#x306A;&#x3044;</p>
+</blockquote>
+</blockquote>
+<h2 id="list">List</h2>
+<p>Scala&#x3067;&#x306F;Array&#x3092;&#x4F7F;&#x3046;&#x4EE3;&#x308F;&#x308A;&#x306B;List&#x3084;Vector&#x3068;&#x8A00;&#x3063;&#x305F;&#x30C7;&#x30FC;&#x30BF;&#x69CB;&#x9020;&#x304C;&#x3088;&#x304F;&#x4F7F;&#x308F;&#x308C;&#x307E;&#x3059;&#x3002;</p>
+<p>List&#x306E;&#x7279;&#x5FB4;&#x306F;<strong><em>immutable</em></strong>&#x3067;&#x3042;&#x308B;&#x3053;&#x3068;&#x3067;&#x3059;&#x3002;</p>
+<p>&#x4E2D;&#x8EAB;&#x3092;&#x5909;&#x66F4;&#x3067;&#x304D;&#x306A;&#x3044;&#x30C7;&#x30FC;&#x30BF;&#x69CB;&#x9020;&#xFF08;&#x6C38;&#x7D9A;&#x30C7;&#x30FC;&#x30BF;&#x69CB;&#x9020;&#x3068;&#x3082;&#x547C;&#x3076;&#xFF09;&#x306F;Scala&#x304C;&#x30B5;&#x30DD;&#x30FC;&#x30C8;&#x3044;&#x3066;&#x3044;&#x308B;&#x95A2;&#x6570;&#x578B;&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30DF;&#x30F3;&#x30B0;&#x306B;&#x3068;&#x3063;&#x3066;&#x91CD;&#x8981;&#x306A;&#x8981;&#x7D20;&#x3067;&#x3059;&#x3002;</p>
+<p>List&#x306F;&#x5148;&#x982D;&#x3078;&#x306E;&#x30A2;&#x30AF;&#x30BB;&#x30B9;&#x306F;&#x9AD8;&#x901F;&#x306A;&#x53CD;&#x9762;&#x3001;&#x8981;&#x7D20;&#x3078;&#x306E;&#x30E9;&#x30F3;&#x30C0;&#x30E0;&#x30A2;&#x30AF;&#x30BB;&#x30B9;&#x3084;&#x672B;&#x5C3E;&#x3078;&#x306E;&#x30C7;&#x30FC;&#x30BF;&#x633F;&#x5165;&#x306F;List&#x306E;&#x9577;&#x3055;&#x306B;&#x6BD4;&#x4F8B;&#x3057;&#x305F;&#x6642;&#x9593;&#x304C;&#x304B;&#x304B;&#x308A;&#x307E;&#x3059;&#x3002;</p>
+<p>List&#x306E;&#x672B;&#x5C3E;&#x306B;&#x8981;&#x7D20;&#x3092;&#x8FFD;&#x52A0;&#x3059;&#x308B;&#x3088;&#x3046;&#x306A;&#x9045;&#x3044;&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x3092;&#x66F8;&#x3044;&#x3066;&#x3057;&#x307E;&#x3046;&#x3053;&#x3068;&#x304C;&#x3042;&#x308B;&#x306E;&#x3067;&#x6CE8;&#x610F;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</p>
+<p>List&#x306F;&#x6B21;&#x306E;&#x3088;&#x3046;&#x306B;&#x5BA3;&#x8A00;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</p>
+<blockquote>
+<p>val lst = List(pram1, pram2, pram3, ..., pramN)</p>
+</blockquote>
+<p>Scala&#x3067;&#x306F;&#x304B;&#x3089;&#x306E;List&#x3092;&#x8868;&#x3059;&#x306E;&#x306B;&quot;Nil&quot;&#x3068;&#x3044;&#x3046;&#x3082;&#x306E;&#x3092;&#x4F7F;&#x3044;&#x307E;&#x3059;&#x3002;</p>
+<blockquote>
+<p>&#x3053;&#x306E;Nil&#x306F;Ruby&#x306E;Nil&#x3068;&#x306F;&#x9055;&#x3044;&#x3001;&#x30C7;&#x30D5;&#x30A9;&#x30EB;&#x30C8;&#x3067;&#x30B9;&#x30B3;&#x30FC;&#x30D7;&#x306B;&#x5165;&#x3063;&#x3066;&#x3044;&#x308B;&#x3060;&#x3051;&#x306E;&#x305F;&#x3060;&#x306E;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x3067;&#x3059;&#x3002;</p>
+</blockquote>
+<p>List&#x306B;&#x306F;&#x3059;&#x3067;&#x306B;&#x3042;&#x308B;List&#x306E;&#x5148;&#x982D;&#x306B;&#x8981;&#x7D20;&#x3092;&#x63A5;&#x7740;&#x3059;&#x308B;&#x30E1;&#x30BD;&#x30C3;&#x30C9;<code>::</code>(&#x30B3;&#x30F3;&#x30B9;&#x3068;&#x8AAD;&#x3080;)&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;</p>
+<pre><code class="lang-Java">val a1 = <span class="hljs-number">1</span> :: Nil
+val a2 = <span class="hljs-number">2</span> :: a1
+val a3 = <span class="hljs-number">3</span> :: a2
+<span class="hljs-comment">// &#x63A5;&#x7740;&#x3057;&#x305F;&#x3044;&#x8981;&#x7D20;&#x3092;::&#x3092;&#x7834;&#x7523;&#x3067;List&#x306E;&#x524D;&#x306B;&#x66F8;&#x304F;&#x3053;&#x3068;&#x3067;List&#x306E;&#x5148;&#x982D;&#x306B;&#x8981;&#x7D20;&#x3092;&#x63A5;&#x7740;&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;</span>
+</code></pre>
+<blockquote>
+<p>&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x540D;&#x306E;&#x6700;&#x5F8C;&#x304C;&quot;:&quot;&#x3067;&#x7D42;&#x308F;&#x308B;&#x5834;&#x5408;&#x3001;&#x88AB;&#x6F14;&#x7B97;&#x5B50;&#x306E;&#x524D;&#x3068;&#x5F8C;&#x308D;&#x3092;&#x3072;&#x3063;&#x304F;&#x308A;&#x8FD4;&#x3057;&#x3066;&#x53F3;&#x7D50;&#x5408;&#x3067;&#x547C;&#x3073;&#x51FA;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+<p>&#x8981;&#x3059;&#x308B;&#x306B;&quot;:&quot;&#x3067;&#x7D42;&#x308F;&#x308B;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x306F;&#x53F3;&#x8FBA;&#x306E;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x3068;&#x3057;&#x3066;&#x547C;&#x3073;&#x51FA;&#x3055;&#x308C;&#x308B;&#x3068;&#x3044;&#x3046;&#x3053;&#x3068;&#x3067;&#x3059;&#x3002;</p>
+<pre><code class="lang-java">param1 :: param2 :: param3
+<span class="hljs-comment">//&#x5B9F;&#x969B;&#x306B;&#x306F;&#x6B21;&#x306E;&#x3088;&#x3046;&#x306B;&#x547C;&#x3073;&#x3060;&#x3055;&#x308C;&#x307E;&#x3059;</span>
+param3.::(param2).::(param1)
+</code></pre>
+</blockquote>
+<p>List&#x540C;&#x58EB;&#x306E;&#x7D50;&#x5408;&#x306B;&#x306F;<code>++</code>&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x3092;&#x4F7F;&#x3044;&#x307E;&#x3059;&#x3002;</p>
+<blockquote>
+<p>&#x5927;&#x304D;&#x306A;List&#x540C;&#x58EB;&#x306E;&#x7D50;&#x5408;&#x306F;&#x8A08;&#x7B97;&#x91CF;&#x304C;&#x5927;&#x304D;&#x304F;&#x306A;&#x308B;&#x306E;&#x3067;&#x6CE8;&#x610F;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;</p>
+</blockquote>
+<pre><code class="lang-java">val lstJoin = List(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>) ++ List(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>)
+</code></pre>
+<p>mkString&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x306F;&#x975E;&#x5E38;&#x306B;&#x983B;&#x7E41;&#x306B;&#x4F7F;&#x7528;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;&#x3053;&#x306E;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x306F;&#x5F15;&#x6570;&#x306B;&#x3088;&#x3063;&#x3066;&#x591A;&#x91CD;&#x5B9A;&#x7FA9;&#x3055;&#x308C;&#x3066;&#x304A;&#x308A;&#x3001;3&#x3064;&#x306E;&#x30D0;&#x30FC;&#x30B8;&#x30E7;&#x30F3;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x5F15;&#x6570;</th>
+<th style="text-align:left">&#x5BA3;&#x8A00;</th>
+<th style="text-align:left">&#x52B9;&#x679C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x306A;&#x3057;</td>
+<td style="text-align:left">mkString()</td>
+<td style="text-align:left">&#x30EA;&#x30B9;&#x30C8;&#x306E;&#x5DE6;&#x304B;&#x3089;&#x9806;&#x306B;&#x7D50;&#x5408;&#x3057;&#x305F;&#x6587;&#x5B57;&#x5217;&#x3092;&#x8FD4;&#x3059;</td>
+</tr>
+<tr>
+<td style="text-align:left">1&#x3064;</td>
+<td style="text-align:left">mkString(&quot;sep&quot;)</td>
+<td style="text-align:left">&#x5F15;&#x6570;&#x306B;&#x30BB;&#x30D1;&#x30EC;&#x30FC;&#x30BF;&#x6587;&#x5B57;&#x5217;&#x3092;&#x53D6;&#x308A;&#x3001;&#x30EA;&#x30B9;&#x30C8;&#x306E;&#x5404;&#x8981;&#x7D20;&#x3092;&#x5F15;&#x6570;&#x3067;&#x533A;&#x5207;&#x3063;&#x3066;&#x5DE6;&#x304B;&#x3089;&#x9806;&#x306B;&#x7D50;&#x5408;&#x3057;&#x305F;&#x6587;&#x5B57;&#x5217;&#x3092;&#x8FD4;&#x3059;</td>
+</tr>
+<tr>
+<td style="text-align:left">3&#x3064;</td>
+<td style="text-align:left">mkString(&quot;start&quot;, &quot;sep&quot;, &quot;end&quot;)</td>
+<td style="text-align:left">start&#x3068;end&#x306B;&#x56F2;&#x307E;&#x308C;&#x3001;&#x304B;&#x3064;sep&#x3067;&#x533A;&#x5207;&#x3089;&#x308C;&#x305F;&#x7D50;&#x5408;&#x3055;&#x308C;&#x305F;&#x6587;&#x5B57;&#x5217;&#x3092;&#x8FD4;&#x3059;</td>
+</tr>
+</tbody>
+</table>
+<p>foldLeft&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x306F;List&#x306B;&#x3068;&#x3063;&#x3066;&#x975E;&#x5E38;&#x306B;&#x57FA;&#x672C;&#x7684;&#x306A;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x3067;&#x3059;&#x3002;&#x4ED6;&#x306E;&#x69D8;&#x3005;&#x306A;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x3092;foldLeft&#x3092;&#x4F7F;&#x3063;&#x3066;&#x5B9F;&#x88C5;&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</p>
+<p>&#x69CB;&#x6587;&#x306F;&#x6B21;&#x306E;&#x901A;&#x308A;&#x3067;&#x3059;&#x3002;</p>
+<blockquote>
+<p>def foldLeft<a href="z: B" target="_blank">B</a>(f: (B, A) =&gt; B): B</p>
+<blockquote>
+<p>&#x3053;&#x306E;&#x6642;z&#x304C;foldLeft&#x306E;&#x521D;&#x671F;&#x5024;&#x3067;&#x3001;List&#x3092;&#x5DE6;&#x304B;&#x3089;&#x8FBF;&#x308A;&#x306A;&#x304C;&#x3089;f&#x3092;&#x9069;&#x7528;&#x3057;&#x3066;&#x3044;&#x304D;&#x307E;&#x3059;&#x3002;</p>
+</blockquote>
+</blockquote>
+<pre><code class="lang-Java">val foldLeftRes = List(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>).foldLeft(<span class="hljs-number">0</span>)( (x, y) =&gt; x + y)
+<span class="hljs-comment">// &#x3053;&#x308C;&#x306F;&#x30EA;&#x30B9;&#x30C8;&#x306E;&#x8981;&#x7D20;&#x3092;&#x5DE6;&#x304B;&#x3089;&#x9806;&#x306B;&#x300C;&#x7573;&#x307F;&#x8FBC;&#x3080;&#x300D;&#x51E6;&#x7406;&#x3092;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;</span>
+<span class="hljs-comment">// &#x5DE6;&#x304B;&#x3089;&#x9806;&#x306B;&#x52A0;&#x7B97;&#x3092;&#x3057;&#x3066;&#x3044;&#x308B;&#x306E;&#x3067;&#x7D50;&#x679C;&#x306F;6&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;</span>
+</code></pre>
+<p>foldRight&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x306F;&#x53F3;&#x304B;&#x3089;&#x7573;&#x307F;&#x8FBC;&#x307F;&#x3092;&#x884C;&#x3044;&#x307E;&#x3059;&#x3002;</p>
+<pre><code class="lang-Java">val foldRightRes = List(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>).foldRight(<span class="hljs-number">0</span>)( (x, y) =&gt; x + y)
+</code></pre>
+<p>map&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x306F;1&#x5F15;&#x6570;&#x306E;&#x95A2;&#x6570;&#x3092;&#x5F15;&#x6570;&#x306B;&#x53D6;&#x308A;&#x3001;&#x5404;&#x8981;&#x7D20;&#x306B;&#x95A2;&#x6570;&#x3092;&#x9069;&#x7528;&#x3057;&#x305F;&#x7D50;&#x679C;&#x3092;&#x8FD4;&#x3059;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x3067;&#x3059;&#x3002;</p>
+<pre><code class="lang-Java">val mapList = List(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>).map(x =&gt; x * <span class="hljs-number">2</span>)
+</code></pre>
+<blockquote>
+<p>&#x3088;&#x304F;&#x3042;&#x308B;map&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x3068;&#x540C;&#x3058;&#x3067;&#x3059;</p>
+</blockquote>
+<p>filter&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x306F;Boolean&#x578B;&#x3092;&#x8FD4;&#x3059;1&#x5F15;&#x6570;&#x306E;&#x95A2;&#x6570;&#x3092;&#x5F15;&#x6570;&#x306B;&#x3068;&#x308A;&#x3001;&#x5404;&#x8981;&#x7D20;&#x306B;&#x95A2;&#x6570;&#x3092;&#x9069;&#x7528;&#x3057;&#x3001;true&#x306B;&#x306A;&#x3063;&#x305F;&#x8981;&#x7D20;&#x306E;&#x307F;&#x3092;&#x62BD;&#x51FA;&#x3057;&#x305F;&#x65B0;&#x305F;&#x306A;List&#x3092;&#x304B;&#x3048;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+<pre><code class="lang-Java">val filterList = List(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>).filter(x =&gt; x % <span class="hljs-number">2</span> == <span class="hljs-number">1</span>)
+<span class="hljs-comment">// &#x5947;&#x6570;&#x306E;&#x8981;&#x7D20;&#x306E;&#x307F;&#x62BD;&#x51FA;</span>
+</code></pre>
+<p>find&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x306F;&#x3001;Boolean&#x578B;&#x3092;&#x8FD4;&#x3059;1&#x5F15;&#x6570;&#x306E;&#x95A2;&#x6570;&#x3092;&#x5F15;&#x6570;&#x306B;&#x53D6;&#x308A;&#x3001;&#x5404;&#x8981;&#x7D20;&#x306B;&#x524D;&#x304B;&#x3089;&#x9806;&#x756A;&#x306B;&#x95A2;&#x6570;&#x3092;&#x9069;&#x7528;&#x3057;&#x3001;&#x6700;&#x521D;&#x306B;true&#x306B;&#x306A;&#x3063;&#x305F;&#x8981;&#x7D20;&#x3092;Some&#x3067;&#x30E9;&#x30C3;&#x30D4;&#x30F3;&#x30B0;&#x3057;&#x305F;&#x5024;&#x3092;Option&#x578B;&#x3068;&#x3057;&#x3066;&#x8FD4;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+<p>1&#x3064;&#x306E;&#x8981;&#x7D20;&#x3082;&#x30DE;&#x30C3;&#x30C1;&#x3057;&#x306A;&#x304B;&#x3063;&#x305F;&#x5834;&#x5408;&#x306F;None&#x3092;Option&#x578B;&#x3068;&#x3057;&#x3066;&#x8FD4;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+<blockquote>
+<p>&#x4ECA;&#x306E;&#x3068;&#x3053;&#x308D;Option&#x578B;&#x306F;&#x623B;&#x308A;&#x5024;&#x3092;&#x30E9;&#x30C3;&#x30D4;&#x30F3;&#x30B0;&#x3057;&#x3066;&#x3001;&#x5024;&#x304C;&#x3042;&#x308C;&#x3070;Some&#x578B;&#x3092;&#x306A;&#x3051;&#x308C;&#x3070;None&#x578B;&#x3092;&#x8FD4;&#x3059;&#x578B;&#x3060;&#x3068;&#x601D;&#x3063;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;</p>
+</blockquote>
+<pre><code class="lang-Java">val findList = List(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>).find(x =&gt; x % <span class="hljs-number">2</span> == <span class="hljs-number">1</span>)
+</code></pre>
+<p>takeWhile&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x306F;&#x3001;Boolean&#x578B;&#x3092;&#x8FD4;&#x3059;1&#x5F15;&#x6570;&#x306E;&#x95A2;&#x6570;&#x3092;&#x5F15;&#x6570;&#x306B;&#x53D6;&#x308A;&#x3001;&#x524D;&#x304B;&#x3089;&#x9806;&#x756A;&#x306B;&#x95A2;&#x6570;&#x3092;&#x9069;&#x7528;&#x3057;&#x7D50;&#x679C;&#x304C;true&#x306E;&#x9593;&#x306E;&#x307F;&#x304B;&#x3089;&#x306A;&#x308B;List&#x3092;&#x8FD4;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+<pre><code class="lang-Java">val takeWhileList = List(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>).takeWhile(x =&gt; x != <span class="hljs-number">5</span>)
+</code></pre>
+<p>count&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x306F;&#x3001;Boolean&#x578B;&#x3092;&#x8FD4;&#x3059;1&#x5F15;&#x6570;&#x306E;&#x95A2;&#x6570;&#x3092;&#x5F15;&#x6570;&#x306B;&#x53D6;&#x308A;&#x3001;&#x3059;&#x3079;&#x3066;&#x306E;&#x8981;&#x7D20;&#x306B;&#x95A2;&#x6570;&#x3092;&#x9069;&#x7528;&#x3057;&#x3066;&#x3001;true&#x304C;&#x8FD4;&#x3063;&#x3066;&#x304D;&#x305F;&#x8981;&#x7D20;&#x306E;&#x6570;&#x3092;&#x8A08;&#x7B97;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+<pre><code class="lang-Java">val countList = List(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>).count(x =&gt; x % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>)
+</code></pre>
+<p>flatMap&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x306F;1&#x5F15;&#x6570;&#x306E;&#x95A2;&#x6570;&#x3092;&#x5F15;&#x6570;&#x306B;&#x53D6;&#x308A;&#x3001;&#x5404;&#x8981;&#x7D20;&#x306B;&#x95A2;&#x6570;&#x3092;&#x9069;&#x7528;&#x3057;&#x305F;&#x7D50;&#x679C;&#x306E;&#x8981;&#x7D20;&#x304B;&#x3089;&#x306A;&#x308B;&#x30B3;&#x30EC;&#x30AF;&#x30B7;&#x30E7;&#x30F3;&#x3092;&#x5206;&#x89E3;&#x3057;&#x3066;List&#x306E;&#x8981;&#x7D20;&#x306B;&#x3057;&#x3066;&#x8FD4;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+<pre><code class="lang-Java">val flatMapList = List(List(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>), List(<span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>) ).flatMap{e =&gt; e.map(g =&gt; g + <span class="hljs-number">1</span>) }
+<span class="hljs-comment">// &#x30CD;&#x30B9;&#x30C8;&#x3057;&#x305F;List&#x306E;&#x5404;&#x8981;&#x7D20;&#x306B;flatMap&#x306E;&#x4E2D;&#x3067;map&#x3092;&#x7528;&#x3044;&#x3066;&#x3001;List&#x306E;&#x5404;&#x8981;&#x7D20;&#x306B;1&#x3092;&#x52A0;&#x7B97;&#x3057;&#x305F;&#x3082;&#x306E;&#x3092;&#x5E73;&#x3089;&#x306B;&#x3057;&#x3066;&#x8FD4;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;</span>
+</code></pre>
+<h2 id="vector">Vector</h2>
+<p>Vector&#x306F;immutable&#x3067;&#x3059;&#x3002;</p>
+<p>&#x8981;&#x7D20;&#x3078;&#x306E;&#x30E9;&#x30F3;&#x30C0;&#x30E0;&#x30A2;&#x30AF;&#x30BB;&#x30B9;&#x3084;&#x9577;&#x3055;&#x306E;&#x53D6;&#x5F97;&#x3001;&#x30C7;&#x30FC;&#x30BF;&#x306E;&#x633F;&#x5165;&#x30FB;&#x524A;&#x9664;&#x3044;&#x305A;&#x308C;&#x306E;&#x64CD;&#x4F5C;&#x3082;&#x5341;&#x5206;&#x306B;&#x9AD8;&#x901F;&#x306B;&#x3067;&#x304D;&#x308B;&#x6BD4;&#x8F03;&#x7684;&#x4E07;&#x80FD;&#x306A;&#x30C7;&#x30FC;&#x30BF;&#x69CB;&#x9020;&#x3067;&#x3059;&#x3002;</p>
+<p>immutable&#x306A;&#x30C7;&#x30FC;&#x30BF;&#x69CB;&#x9020;&#x3092;&#x4F7F;&#x3046;&#x5834;&#x5408;&#x306F;&#x307E;&#x305A;Vector&#x3092;&#x691C;&#x8A0E;&#x3059;&#x308B;&#x3068;&#x826F;&#x3044;&#x3067;&#x3057;&#x3087;&#x3046;</p>
+<pre><code class="lang-Java">val vec1 = Vector(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>)
+val vec2 = <span class="hljs-number">5</span> +: vec1
+val vec3 = vec2 :+ <span class="hljs-number">6</span>
+val vec4 = vec3.updated(<span class="hljs-number">2</span>, <span class="hljs-number">20</span>)
+<span class="hljs-comment">// &#x8981;&#x7D20;&#x3092;&#x8FFD;&#x52A0;&#x3059;&#x308B;&#x306B;&#x306F;+:&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x3068;:+&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x3092;&#x4F7F;&#x3044;&#x307E;&#x3059;</span>
+<span class="hljs-comment">// updated(index, value)&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x3067;&#x8981;&#x7D20;&#x306E;&#x66F4;&#x65B0;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;</span>
+</code></pre>
+<h2 id="map">Map</h2>
+<p>Map&#x306F;&#x30AD;&#x30FC;&#x304B;&#x3089;&#x5024;&#x3078;&#x306E;&#x30DE;&#x30C3;&#x30D4;&#x30F3;&#x30B0;&#x3092;&#x63D0;&#x4F9B;&#x3059;&#x308B;&#x30C7;&#x30FC;&#x30BF;&#x69CB;&#x9020;&#x3067;&#x3059;&#x3002;&#x4ED6;&#x306E;&#x8A00;&#x8A9E;&#x3067;&#x306F;&#x8F9E;&#x66F8;&#x3084;&#x9023;&#x60F3;&#x914D;&#x5217;&#x306A;&#x3069;&#x3068;&#x547C;&#x3070;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</p>
+<p>Scala&#x306B;&#x306F;immutable&#x306A;Map&#x3068;mutable&#x306A;Map&#x306E;2&#x7A2E;&#x985E;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3001;</p>
+<p>&#x5185;&#x90E8;&#x306E;&#x5B9F;&#x88C5;&#x3067;&#x306F;&#x4E3B;&#x306B;HashMap&#x3068;TreeMap&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x304C;&#x3001;&#x901A;&#x5E38;&#x306F;HashMap&#x304C;&#x4F7F;&#x308F;&#x308C;&#x307E;&#x3059;&#x3002;</p>
+<pre><code class="lang-Java">val m = Map(<span class="hljs-string">&quot;A&quot;</span> -&gt; <span class="hljs-number">1</span>, <span class="hljs-string">&quot;B&quot;</span> -&gt; <span class="hljs-number">2</span>, <span class="hljs-string">&quot;C&quot;</span> -&gt; <span class="hljs-number">3</span>)
+val m2 = m.updated(<span class="hljs-string">&quot;B&quot;</span>, <span class="hljs-number">10</span>)
+</code></pre>
+<h2 id="set">Set</h2>
+<p>Set&#x306F;&#x5024;&#x306E;&#x96C6;&#x5408;&#x3092;&#x63D0;&#x4F9B;&#x3059;&#x308B;&#x30C7;&#x30FC;&#x30BF;&#x69CB;&#x9020;&#x3067;&#x3059;&#x3002;Set&#x306E;&#x4E2D;&#x306B;&#x306F;&#x540C;&#x3058;&#x5024;&#x304C;2&#x3064;&#x4EE5;&#x4E0A;&#x5B58;&#x5728;&#x3057;&#x307E;&#x305B;&#x3093;&#x3001;</p>
+<p>Map&#x3068;&#x540C;&#x69D8;&#x306B;&#x4F55;&#x3082;&#x6307;&#x5B9A;&#x3057;&#x306A;&#x3044;&#x5834;&#x5408;&#x306F;immutable&#x3067;&#x3059;&#x3002;</p>
+<p>&#x5185;&#x90E8;&#x306E;&#x5B9F;&#x88C5;&#x3067;&#x306F;HashSet&#x3068;TreeSet&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x304C;&#x3001;&#x901A;&#x5E38;&#x306F;HashSet&#x304C;&#x4F7F;&#x308F;&#x308C;&#x307E;&#x3059;&#x3002;</p>
+<pre><code class="lang-Java">val s = Set(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>)
+<span class="hljs-comment">// &#x91CD;&#x8907;&#x3057;&#x3066;&#x3044;&#x308B;&#x5024;&#x306F;1&#x3064;&#x306B;&#x307E;&#x3068;&#x3081;&#x3089;&#x308C;&#x307E;&#x3059;</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="chapter7.html" class="navigation navigation-prev " aria-label="Previous page: objectとcase class">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="chapter0.html" class="navigation navigation-next " aria-label="Next page: 参考文献">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"コレクション","level":"1.9","depth":1,"next":{"title":"参考文献","level":"1.10","depth":1,"path":"chapter0.md","ref":"chapter0.md","articles":[]},"previous":{"title":"objectとcase class","level":"1.8","depth":1,"path":"chapter7.md","ref":"chapter7.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["forkmegithub"],"pluginsConfig":{"forkmegithub":{"color":"gray","url":"https://github.com/iti-group/scala_newbie"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter8.md","mtime":"2017-02-11T04:19:28.790Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-15T02:35:32.297Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-forkmegithub/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

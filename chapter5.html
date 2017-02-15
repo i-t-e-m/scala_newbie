@@ -1,0 +1,569 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>構文と式と文 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-forkmegithub/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="chapter6.html" />
+    
+    
+    <link rel="prev" href="chapter4.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Scala勉強会
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="chapter1.html">
+            
+                <a href="chapter1.html">
+            
+                    
+                    Scalaの概要
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="chapter2.html">
+            
+                <a href="chapter2.html">
+            
+                    
+                    Scalaのメリット
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="chapter3.html">
+            
+                <a href="chapter3.html">
+            
+                    
+                    Scalaの環境構築
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="chapter4.html">
+            
+                <a href="chapter4.html">
+            
+                    
+                    Hello Scala World
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6" data-path="chapter5.html">
+            
+                <a href="chapter5.html">
+            
+                    
+                    構文と式と文
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="chapter6.html">
+            
+                <a href="chapter6.html">
+            
+                    
+                    classとメソッドとフィールドとアクセス修飾子
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="chapter7.html">
+            
+                <a href="chapter7.html">
+            
+                    
+                    objectとcase class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="chapter8.html">
+            
+                <a href="chapter8.html">
+            
+                    
+                    コレクション
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="chapter0.html">
+            
+                <a href="chapter0.html">
+            
+                    
+                    参考文献
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >構文と式と文</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x69CB;&#x6587;&#x3068;&#x5F0F;&#x3068;&#x6587;">&#x69CB;&#x6587;&#x3068;&#x5F0F;&#x3068;&#x6587;</h1>
+<hr>
+<ul>
+<li><p>&#x69CB;&#x6587;&#xFF08;Syntax&#xFF09;&#x3068;&#x306F;</p>
+<blockquote>
+<p>&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x304C;&#x69CB;&#x9020;&#x3092;&#x6301;&#x3064;&#x305F;&#x3081;&#x306E;&#x30EB;&#x30FC;&#x30EB;&#x3067;&#x3059;&#x3002;class&#x3084;val&#x3001;if&#x306A;&#x3069;&#x306E;&#x66F8;&#x304D;&#x65B9;&#xFF08;&#x30EB;&#x30FC;&#x30EB;&#xFF09;&#x304C;&#x305D;&#x308C;&#x306B;&#x5F53;&#x305F;&#x308A;&#x307E;&#x3059;&#x3002;</p>
+</blockquote>
+</li>
+<li><p>&#x5F0F;&#xFF08;Expression&#xFF09;&#x3068;&#x306F;</p>
+<blockquote>
+<p>&#x8A55;&#x4FA1;&#x3059;&#x308B;&#x3053;&#x3068;&#x3067;&#x5024;&#x306B;&#x306A;&#x308B;&#x3082;&#x306E;&#x3067;&#x3059;&#x3002;<code>1</code>&#x3084;<code>&quot;hoge&quot;</code>&#x3084;<code>2+3</code>&#x306A;&#x3069;&#x3067;&#x3059;&#x3002;
+Scala&#x3067;&#x306E;&#x5236;&#x5FA1;&#x69CB;&#x6587;&#x306F;&#x3059;&#x3079;&#x3066;&#x5F0F;&#x3067;&#x3059;&#x3002;&#x3088;&#x3063;&#x3066;&#x5FC5;&#x305A;&#x5024;&#x3092;&#x8FD4;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+</blockquote>
+</li>
+<li><p>&#x6587;&#xFF08;Statement&#xFF09;&#x3068;&#x306F;</p>
+<blockquote>
+<p>&#x8A55;&#x4FA1;&#x3057;&#x3066;&#x3082;&#x5024;&#x306B;&#x306A;&#x3089;&#x306A;&#x3044;&#x3082;&#x306E;&#x3067;&#x3059;&#x3002;<code>val hoge = 1</code>&#x306A;&#x3069;&#x3067;&#x3059;&#x3002;&#x3053;&#x308C;&#x306F;&#x3001;&#x8A55;&#x4FA1;&#x3057;&#x3066;&#x3082;&#x5909;&#x6570;hoge&#x304C;&#x5B9A;&#x7FA9;&#x3055;&#x308C;hoge&#x306E;&#x5024;&#x304C;1&#x306B;&#x306A;&#x308B;&#x3060;&#x3051;&#x3067;&#x3001;&#x5168;&#x4F53;&#x3068;&#x3057;&#x3066;&#x306F;&#x5024;&#x3092;&#x6301;&#x3061;&#x307E;&#x305B;&#x3093;&#x3002;</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x5B9A;&#x7FA9;">&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x5B9A;&#x7FA9;</h2>
+<p>Scala&#x306E;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x5B9A;&#x7FA9;&#x306F;&#x6B21;&#x306E;&#x3088;&#x3046;&#x306B;&#x66F8;&#x304D;&#x307E;&#x3059;&#x3002;</p>
+<pre><code class="lang-Java"><span class="hljs-function">def <span class="hljs-title">methodOne</span><span class="hljs-params">()</span>: String </span>= {
+  <span class="hljs-string">&quot;hoge&quot;</span> + <span class="hljs-string">&quot;foo&quot;</span>
+}
+</code></pre>
+<blockquote>
+<p>&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x5B9A;&#x7FA9;&#x306E;&#x6CE2;&#x62EC;&#x5F27;&#x306F;&#x5FC5;&#x305A;&#x3057;&#x3066;&#x3082;&#x5FC5;&#x8981;&#x3067;&#x306F;&#x3042;&#x308A;&#x307E;&#x305B;&#x3093;&#x3002;</p>
+<pre><code class="lang-Java"><span class="hljs-function">def <span class="hljs-title">methodOne</span><span class="hljs-params">()</span>: String </span>= <span class="hljs-string">&quot;hoge&quot;</span> + <span class="hljs-string">&quot;foo&quot;</span>
+</code></pre>
+<blockquote>
+<p>&#x623B;&#x308A;&#x5024;&#x306E;&#x578B;&#x3082;&#x7701;&#x7565;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;
+&#x623B;&#x308A;&#x5024;&#x306E;&#x578B;&#x306F;&#x30B3;&#x30F3;&#x30D1;&#x30A4;&#x30E9;&#x306B;&#x3088;&#x308A;&#x81EA;&#x52D5;&#x63A8;&#x8AD6;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;</p>
+<pre><code class="lang-Java"><span class="hljs-function">def <span class="hljs-title">methodOne</span><span class="hljs-params">()</span> </span>= <span class="hljs-string">&quot;hoge&quot;</span> + <span class="hljs-string">&quot;foo&quot;</span>
+</code></pre>
+</blockquote>
+</blockquote>
+<h2 id="if&#x5F0F;">if&#x5F0F;</h2>
+<p>Scala&#x306E;if&#x5F0F;&#x306F;Java&#x306E;if&#x6587;&#x3068;&#x307B;&#x3068;&#x3093;&#x3069;&#x304A;&#x306A;&#x3058;&#x3067;&#x3059;&#x3002;</p>
+<p>&#x6761;&#x4EF6;&#x5F0F;&#x306F;Boolean&#x578B;&#x3067;&#x3042;&#x308B;&#x5FC5;&#x8981;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;</p>
+<p>if&#x5F0F;&#x306E;&#x69CB;&#x6587;&#x306F;&#x6B21;&#x306E;&#x901A;&#x308A;&#x3067;&#x3059;&#x3002;</p>
+<blockquote>
+<p>if(&#x6761;&#x4EF6;&#x5F0F;) A [else B]</p>
+</blockquote>
+<pre><code class="lang-Java">val length = <span class="hljs-number">170</span>
+<span class="hljs-keyword">if</span>(length &lt; <span class="hljs-number">170</span>) {
+  <span class="hljs-string">&quot;170cm&#x672A;&#x6E80;&#x3067;&#x3059;&quot;</span>
+} <span class="hljs-keyword">else</span> {
+  <span class="hljs-string">&quot;170cm&#x4EE5;&#x4E0A;&#x3067;&#x3059;&quot;</span>
+}
+</code></pre>
+<p>&#x5236;&#x5FA1;&#x69CB;&#x6587;&#x306F;&#x3059;&#x3079;&#x3066;&#x5F0F;&#x306A;&#x306E;&#x3067;&#x6B21;&#x306E;&#x3088;&#x3046;&#x306A;&#x3053;&#x3068;&#x3082;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</p>
+<pre><code class="lang-Java">val weight = <span class="hljs-number">60</span>
+val youWehight = <span class="hljs-keyword">if</span>(weight &lt;= <span class="hljs-number">60</span>) {
+  <span class="hljs-string">&quot;60kg&#x4EE5;&#x4E0B;&#x3067;&#x3059;&quot;</span>
+} <span class="hljs-keyword">else</span> {
+  <span class="hljs-string">&quot;60kg&#x3088;&#x308A;&#x91CD;&#x3044;&#x3067;&#x3059;&quot;</span>
+}
+</code></pre>
+<blockquote>
+<p>&#x3053;&#x306E;&#x7D50;&#x679C;&#x306F;&#x5909;&#x6570;youWehight&#x306B;&quot;60kg&#x4EE5;&#x4E0B;&#x3067;&#x3059;&quot;&#x304C;&#x4EE3;&#x5165;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;
+else&#x304C;&#x5B58;&#x5728;&#x3057;&#x306A;&#x3044;&#x5834;&#x5408;&#x306E;&#x623B;&#x308A;&#x5024;&#x306F;Unit&#x578B;&#x306E;&#x5024;&#x304C;&#x8FD4;&#x308A;&#x307E;&#x3059;&#x3002;</p>
+</blockquote>
+<h2 id="while&#x5F0F;">while&#x5F0F;</h2>
+<p>while&#x5F0F;&#x3082;Java&#x3068;&#x307B;&#x307C;&#x540C;&#x3058;&#x3067;&#x3059;&#x3002;</p>
+<p>&#x6761;&#x4EF6;&#x5F0F;&#x306F;Boolean&#x578B;&#x3067;&#x3042;&#x308B;&#x5FC5;&#x8981;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;</p>
+<p>while&#x5F0F;&#x3082;&#x5F0F;&#x306A;&#x306E;&#x3067;&#x623B;&#x308A;&#x5024;&#x3092;&#x6301;&#x3061;&#x307E;&#x3059;&#x304C;&#x3001;while&#x5F0F;&#x304C;&#x9069;&#x5207;&#x306A;&#x623B;&#x308A;&#x5024;&#x304C;&#x5B58;&#x5728;&#x3057;&#x306A;&#x3044;&#x305F;&#x3081;&#x3001;Unit&#x578B;&#x306E;&#x5024;&#x3092;&#x8FD4;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+<p>while&#x5F0F;&#x306E;&#x69CB;&#x6587;&#x306F;&#x6B21;&#x306E;&#x901A;&#x308A;&#x3067;&#x3059;&#x3002;</p>
+<blockquote>
+<p>while(&#x6761;&#x4EF6;&#x5F0F;) A</p>
+</blockquote>
+<pre><code class="lang-Java">var i = <span class="hljs-number">0</span>
+<span class="hljs-keyword">while</span>(i &lt; <span class="hljs-number">5</span>) {
+  printf(<span class="hljs-string">&quot;%d\t&quot;</span>, i)
+  i += <span class="hljs-number">1</span>
+  <span class="hljs-comment">//do-while&#x3082;&#x5B58;&#x5728;&#x3057;&#x307E;&#x3059;&#x3002;&#x3057;&#x304B;&#x3057;&#x3001;break&#x3084;continue&#x306B;&#x76F8;&#x5F53;&#x3059;&#x308B;&#x3082;&#x306E;&#x306F;&#x3042;&#x308A;&#x307E;&#x305B;&#x3093;</span>
+}
+</code></pre>
+<h2 id="for&#x5F0F;">for&#x5F0F;</h2>
+<p>for&#x5F0F;&#x306F;Java&#x3068;&#x540C;&#x3058;&#x3088;&#x3046;&#x306B;&#x4F7F;&#x7528;&#x3067;&#x304D;&#x307E;&#x3059;&#x304C;&#x3001;&#x5168;&#x304F;&#x7570;&#x306A;&#x308B;&#x5F0F;&#x3067;&#x3059;&#x3001;
+for&#x306E;&#x5F0F;&#x306E;&#x69CB;&#x6587;&#x306F;&#x6B21;&#x306E;&#x901A;&#x308A;&#x3067;&#x3059;</p>
+<blockquote>
+<p>for(&#x30B8;&#x30A7;&#x30CD;&#x30EC;&#x30FC;&#x30BF;1; &#x30B8;&#x30A7;&#x30CD;&#x30EC;&#x30FC;&#x30BF;2; ...; &#x30B8;&#x30A7;&#x30CD;&#x30EC;&#x30FC;&#x30BF;n)</p>
+<p>&#x30B8;&#x30A7;&#x30CD;&#x30EC;&#x30FC;&#x30BF;1 = a1 &lt; exp1; &#x30B8;&#x30A7;&#x30CD;&#x30EC;&#x30FC;&#x30BF;2 = a2 &lt; exp2; ...</p>
+<p>expN&#x306F;&#x8A55;&#x4FA1;&#x3059;&#x308B;&#x3053;&#x3068;&#x3067;&#x5024;&#x3068;&#x306A;&#x308B;&#x3082;&#x306E;&#x3092;&#x6307;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+</blockquote>
+<pre><code class="lang-Java"><span class="hljs-keyword">for</span>(x &lt;- <span class="hljs-number">1</span> to <span class="hljs-number">5</span>; y &lt;- <span class="hljs-number">1</span> until <span class="hljs-number">5</span>) {
+  println(<span class="hljs-string">&quot;x = &quot;</span> + x + <span class="hljs-string">&quot;y = &quot;</span> + y)
+}
+<span class="hljs-comment">// 1 to 5&#x306F;1&#x301C;5&#x307E;&#x3067;&#xFF08;5&#x3092;&#x542B;&#x3080;&#xFF09;&#x306E;&#x7BC4;&#x56F2;&#x306E;&#x3053;&#x3068;&#x3067;</span>
+<span class="hljs-comment">// 1 until 5&#x306F;1&#x301C;5&#x307E;&#x3067;&#xFF08;5&#x3092;&#x542B;&#x307E;&#x306A;&#x3044;&#xFF09;&#x306E;&#x7BC4;&#x56F2;&#x3067;&#x3059;</span>
+<span class="hljs-comment">// &lt;-&#x306F;Java&#x306E;&#x62E1;&#x5F35;for&#x3068;&#x540C;&#x3058;&#x3088;&#x3046;&#x306B;&lt;-&#x306E;&#x53F3;&#x8FBA;&#x306B;&#x3042;&#x308B;&#x5024;&#x3092;1&#x3064;&#x305A;&#x3064;&#x3001;&lt;-&#x306E;&#x5DE6;&#x8FBA;&#x306B;&#x9010;&#x6B21;&#x4EE3;&#x5165;&#x3059;&#x308B;</span>
+
+<span class="hljs-comment">// &#x3053;&#x306E;for&#x5F0F;&#x3092;Java&#x3067;&#x8A18;&#x8FF0;&#x3059;&#x308B;&#x3068;&#x3053;&#x306E;&#x3088;&#x3046;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;</span>
+<span class="hljs-comment">// for(int x = 1; x &lt;= 5; x++) {</span>
+<span class="hljs-comment">//   for(int y = 1; y &lt;= 4; y++) {</span>
+<span class="hljs-comment">//     println(&quot;x = &quot; + x + &quot;y = &quot; + y)</span>
+<span class="hljs-comment">//   }</span>
+<span class="hljs-comment">// }</span>
+</code></pre>
+<p>for&#x5F0F;&#x306B;if&#x3092;&#x5165;&#x308C;&#x308B;&#x3053;&#x3068;&#x3082;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</p>
+<pre><code class="lang-Java"><span class="hljs-keyword">for</span>(x &lt;- <span class="hljs-number">1</span> to <span class="hljs-number">5</span>; y &lt;- <span class="hljs-number">1</span> until <span class="hljs-number">5</span>; <span class="hljs-keyword">if</span> x != y) {
+  println(<span class="hljs-string">&quot;x = &quot;</span> + x + <span class="hljs-string">&quot;y = &quot;</span> + y)
+}
+<span class="hljs-comment">// &#x3053;&#x306E;for&#x5F0F;&#x306F;x&#x3068;y&#x304C;&#x7570;&#x306A;&#x308B;&#x5024;&#x306E;&#x3068;&#x304D;&#x306E;&#x307F;&#x62BD;&#x51FA;&#x3057;&#x3066;&#x8868;&#x793A;&#x3057;&#x307E;&#x3059;</span>
+</code></pre>
+<p>for&#x5F0F;&#x306F;&#x30B3;&#x30EC;&#x30AF;&#x30B7;&#x30E7;&#x30F3;(Array&#x3084;List&#x3001;Map&#x3001;Vector&#x306A;&#x3069;)&#x306E;&#x8981;&#x7D20;&#x3092;&#x9806;&#x756A;&#x306B;&#x8FBF;&#x3063;&#x3066;&#x51E6;&#x7406;&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</p>
+<pre><code class="lang-Java"><span class="hljs-keyword">for</span>(l &lt;- List(<span class="hljs-string">&quot;A&quot;</span>, <span class="hljs-string">&quot;B&quot;</span>, <span class="hljs-string">&quot;C&quot;</span>, <span class="hljs-string">&quot;D&quot;</span>, <span class="hljs-string">&quot;E&quot;</span>) ) println(l)
+</code></pre>
+<p>&#x3055;&#x3089;&#x306B;for&#x5F0F;&#x306F;yield&#x3092;&#x4F7F;&#x3046;&#x3053;&#x3068;&#x3067;&#x3001;&#x8FBF;&#x3063;&#x305F;&#x8981;&#x7D20;&#x3092;&#x52A0;&#x5DE5;&#x3057;&#x3066;&#x65B0;&#x3057;&#x3044;&#x30B3;&#x30EC;&#x30AF;&#x30B7;&#x30E7;&#x30F3;&#x3092;&#x4F5C;&#x6210;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</p>
+<pre><code class="lang-Java">val strs = <span class="hljs-keyword">for</span>(l &lt;- List(<span class="hljs-string">&quot;A&quot;</span>, <span class="hljs-string">&quot;B&quot;</span>, <span class="hljs-string">&quot;C&quot;</span>, <span class="hljs-string">&quot;D&quot;</span>, <span class="hljs-string">&quot;E&quot;</span>) ) yield {
+  <span class="hljs-string">&quot;Pre&quot;</span> + l
+}
+<span class="hljs-comment">// &#x3053;&#x306E;&#x7D50;&#x679C;&#x306F;PreA PreB PreC PreD PreE&#x304C;&#x51FA;&#x529B;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;</span>
+</code></pre>
+<blockquote>
+<p>yield&#x30AD;&#x30FC;&#x30EF;&#x30FC;&#x30C9;&#x3092;&#x4F7F;&#x7528;&#x3057;&#x305F;for&#x5F0F;&#x3092;&#x7279;&#x5225;&#x306B;for-comprehension&#x3068;&#x547C;&#x3076;&#x3053;&#x3068;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;</p>
+</blockquote>
+<h2 id="match&#x5F0F;">match&#x5F0F;</h2>
+<p>match&#x5F0F;&#x306F;Java&#x3084;C&#x3067;&#x8A00;&#x3046;switch-case&#x3068;<strong><em>&#x540C;&#x3058;&#x3053;&#x3068;&#x3082;&#x3067;&#x304D;&#x308B;&#x5225;&#x3082;&#x306E;</em></strong>&#x3067;&#x3059;&#x3002;</p>
+<p>match&#x5F0F;&#x306E;&#x623B;&#x308A;&#x5024;&#x306F;&#x30DE;&#x30C3;&#x30C1;&#x3057;&#x305F;&#x30D1;&#x30BF;&#x30FC;&#x30F3;&#x306E;=&gt;&#x53F3;&#x8FBA;&#x306E;&#x5F0F;&#x3092;&#x8A55;&#x4FA1;&#x3057;&#x305F;&#x3082;&#x306E;&#x3068;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;</p>
+<p>match&#x5F0F;&#x306E;&#x57FA;&#x672C;&#x69CB;&#x6587;&#x306F;&#x6B21;&#x306E;&#x901A;&#x308A;&#x3067;&#x3059;&#x3002;</p>
+<blockquote>
+<p>&#x30DE;&#x30C3;&#x30C1;&#x5BFE;&#x8C61;&#x306E;&#x5F0F; match {</p>
+<p>case &#x30D1;&#x30BF;&#x30FC;&#x30F3;1 [if &#x30AC;&#x30FC;&#x30C9;1] =&gt; &#x5F0F;1</p>
+<p>case &#x30D1;&#x30BF;&#x30FC;&#x30F3;2 [if &#x30AC;&#x30FC;&#x30C9;2] =&gt; &#x5F0F;2</p>
+<p>case ...</p>
+<p>case &#x30D1;&#x30BF;&#x30FC;&#x30F3;N =&gt; &#x5F0F;N</p>
+<p>}</p>
+</blockquote>
+<pre><code class="lang-Java"><span class="hljs-comment">// switch&#x306E;&#x3088;&#x3046;&#x306B;&#x4F7F;&#x3046;&#x3068;&#x3053;&#x306E;&#x3088;&#x3046;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;</span>
+val hal = <span class="hljs-string">&quot;hal&quot;</span>
+val whoAreYou = hal match {
+  <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;mode&quot;</span> =&gt; <span class="hljs-string">&quot;no&quot;</span>
+  <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;ikou&quot;</span> =&gt; <span class="hljs-string">&quot;no&quot;</span>
+  <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;hal&quot;</span> =&gt; <span class="hljs-string">&quot;yes&quot;</span>
+}
+
+<span class="hljs-comment">// &#x4EFB;&#x610F;&#x306E;&#x6570;&#x5024;&#x3082;&#x6271;&#x3048;&#x307E;&#x3059;&#x3002;</span>
+val one = <span class="hljs-number">1</span>
+val num = one match {
+  <span class="hljs-keyword">case</span> <span class="hljs-number">1</span> =&gt; <span class="hljs-string">&quot;one&quot;</span>
+  <span class="hljs-keyword">case</span> <span class="hljs-number">2</span> =&gt; <span class="hljs-string">&quot;two&quot;</span>
+  <span class="hljs-keyword">case</span> _ =&gt; <span class="hljs-string">&quot;other&quot;</span>
+}
+<span class="hljs-comment">// &#x30D1;&#x30BF;&#x30FC;&#x30F3;&#x306B;&#x3042;&#x308B;_(&#x30A2;&#x30F3;&#x30C0;&#x30FC;&#x30B9;&#x30B3;&#x30A2;)&#x306F;&#x30EF;&#x30A4;&#x30EB;&#x30C9;&#x30AB;&#x30FC;&#x30C9;&#x3067;&#x3059;&#x3002;&#x3053;&#x306E;&#x30D1;&#x30BF;&#x30FC;&#x30F3;&#x3092;&#x30EF;&#x30A4;&#x30EB;&#x30C9;&#x30D1;&#x30BF;&#x30FC;&#x30F3;&#x3068;&#x3088;&#x3073;&#x307E;&#x3059;&#x3002;</span>
+<span class="hljs-comment">// &#x3053;&#x308C;&#x306F;switch&#x3067;&#x8A00;&#x3046;default&#x306E;&#x3088;&#x3046;&#x306A;&#x3082;&#x306E;&#x3067;&#x3059;&#x3002;&#x30EF;&#x30A4;&#x30EB;&#x30C9;&#x30D1;&#x30BF;&#x30FC;&#x30F3;&#x306F;&#x3059;&#x3079;&#x3066;&#x306E;&#x30B1;&#x30FC;&#x30B9;&#x306B;&#x30DE;&#x30C3;&#x30C1;&#x3057;&#x307E;&#x3059;&#x3002;</span>
+<span class="hljs-comment">// &#x30D5;&#x30A9;&#x30FC;&#x30EB;&#x30B9;&#x30EB;&#x30FC;&#x306F;&#x8D77;&#x3053;&#x308A;&#x307E;&#x305B;&#x3093;&#x3002;&#x3088;&#x3063;&#x3066;break&#x306F;&#x5FC5;&#x8981;&#x3042;&#x308A;&#x307E;&#x305B;&#x3093;&#x3002;</span>
+</code></pre>
+<p>&#x8907;&#x6570;&#x306E;&#x30D1;&#x30BF;&#x30FC;&#x30F3;&#x3092;&#x307E;&#x3068;&#x3081;&#x308B;&#x3053;&#x3068;&#x3082;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</p>
+<pre><code class="lang-Java">one match {
+  <span class="hljs-keyword">case</span> <span class="hljs-number">1</span> | <span class="hljs-number">2</span> =&gt;
+    println(<span class="hljs-string">&quot;first&quot;</span>)
+    println(<span class="hljs-string">&quot;second&quot;</span>)
+  <span class="hljs-keyword">case</span> _ =&gt; println(<span class="hljs-string">&quot;other&quot;</span>)
+}
+<span class="hljs-comment">// one&#x304C;1&#x3082;&#x3057;&#x304F;&#x306F;2&#x306E;&#x5834;&#x5408;&#x306F;firest&#x304C;&#x8868;&#x793A;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;</span>
+</code></pre>
+<p>switch-case&#x4EE5;&#x5916;&#x306E;&#x4F7F;&#x3044;&#x65B9;&#x3068;&#x3057;&#x3066;&#x30B3;&#x30EC;&#x30AF;&#x30B7;&#x30E7;&#x30F3;&#x8981;&#x7D20;&#x306E;&#x4E00;&#x90E8;&#x306B;&#x30DE;&#x30C3;&#x30C1;&#x3055;&#x305B;&#x308B;&#x4F7F;&#x3044;&#x65B9;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;</p>
+<pre><code class="lang-Java">val lst = List(<span class="hljs-string">&quot;A&quot;</span>, <span class="hljs-string">&quot;B&quot;</span>, <span class="hljs-string">&quot;C&quot;</span>, <span class="hljs-string">&quot;D&quot;</span>, <span class="hljs-string">&quot;E&quot;</span>)
+lst match {
+  <span class="hljs-function"><span class="hljs-keyword">case</span> <span class="hljs-title">List</span><span class="hljs-params">(a, <span class="hljs-string">&quot;B&quot;</span>, c, d, e)</span> </span>=&gt;
+    println(<span class="hljs-string">&quot;a = &quot;</span> + a)
+    println(<span class="hljs-string">&quot;c = &quot;</span> + c)
+    println(<span class="hljs-string">&quot;d = &quot;</span> + d)
+    println(<span class="hljs-string">&quot;e = &quot;</span> + e)
+  <span class="hljs-keyword">case</span> _ =&gt; println(<span class="hljs-string">&quot;nothing&quot;</span>)
+  <span class="hljs-comment">// &#x201D;List&#x306E;2&#x756A;&#x76EE;&#x306E;&#x8981;&#x7D20;&#x304C;B&#x304B;&#x3064;&#x8981;&#x7D20;&#x6570;&#x304C;5&#x500B;&#x201D;&#x306E;&#x30D1;&#x30BF;&#x30FC;&#x30F3;&#x306B;&#x30DE;&#x30C3;&#x30C1;&#x3059;&#x308B;&#x3068;&#x3001;a, c, d, e&#x306B;&#x5909;&#x6570;lst&#x306E;2&#x756A;&#x76EE;&#x3092;&#x8997;&#x3044;&#x305F;&#x6B8B;&#x308A;&#x306E;&#x8981;&#x7D20;&#x304C;&#x675F;&#x7E1B;&#x3055;&#x308C;=&gt;&#x306E;&#x53F3;&#x8FBA;&#x306E;&#x5F0F;&#x304C;&#x8A55;&#x4FA1;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;</span>
+}
+</code></pre>
+<p>&#x30D1;&#x30BF;&#x30FC;&#x30F3;&#x30DE;&#x30C3;&#x30C1;&#x3067;&#x306F;&#x30AC;&#x30FC;&#x30C9;&#x5F0F;&#x304C;&#x4F7F;&#x3048;&#x307E;&#x3059;&#x3002;
+&#x30AC;&#x30FC;&#x30C9;&#x5F0F;&#x306B;&#x3082;&#x30DE;&#x30C3;&#x30C1;&#x3057;&#x306A;&#x3051;&#x308C;&#x3070;=&gt;&#x306E;&#x53F3;&#x8FBA;&#x306E;&#x5F0F;&#x306F;&#x8A55;&#x4FA1;&#x3055;&#x308C;&#x307E;&#x305B;&#x3093;</p>
+<pre><code class="lang-Java">lst match {
+  <span class="hljs-function"><span class="hljs-keyword">case</span> <span class="hljs-title">List</span><span class="hljs-params">(<span class="hljs-string">&quot;A&quot;</span>, b, c, d, e)</span> <span class="hljs-keyword">if</span> b !</span>= <span class="hljs-string">&quot;B&quot;</span> =&gt;
+    println(<span class="hljs-string">&quot;b = &quot;</span> + b)
+    println(<span class="hljs-string">&quot;c = &quot;</span> + c)
+    println(<span class="hljs-string">&quot;d = &quot;</span> + d)
+    println(<span class="hljs-string">&quot;e = &quot;</span> + e)
+  <span class="hljs-keyword">case</span> _ =&gt;
+    println(<span class="hljs-string">&quot;nothing&quot;</span>)
+  <span class="hljs-comment">// &#x30AC;&#x30FC;&#x30C9;&#x5F0F;&#x306F;Boolean&#x578B;&#x3067;&#x306A;&#x3051;&#x308C;&#x3070;&#x306A;&#x308A;&#x307E;&#x305B;&#x3093;</span>
+  <span class="hljs-comment">// List&#x306E;&#x5148;&#x982D;&#x304C;A&#x304B;&#x3064;&#x5909;&#x6570;b&#x306B;&#x675F;&#x7E1B;&#x3055;&#x308C;&#x305F;&#x5024;&#x304C;B&#x3067;&#x306A;&#x3044;&#x5834;&#x5408;&#x306E;&#x307F;&#x30DE;&#x30C3;&#x30C1;&#x3057;&#x307E;&#x3059;&#x3002;</span>
+}
+</code></pre>
+<p>&#x30D1;&#x30BF;&#x30FC;&#x30F3;&#x30DE;&#x30C3;&#x30C1;&#x306E;&#x30D1;&#x30BF;&#x30FC;&#x30F3;&#x306F;&#x30CD;&#x30B9;&#x30C8;&#x3055;&#x308C;&#x305F;&#x3082;&#x306E;&#x3082;&#x5BFE;&#x8C61;&#x306B;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</p>
+<pre><code class="lang-Java">val lst = List(List(<span class="hljs-string">&quot;A&quot;</span>), List(<span class="hljs-string">&quot;B&quot;</span>, <span class="hljs-string">&quot;C&quot;</span>, <span class="hljs-string">&quot;D&quot;</span>, <span class="hljs-string">&quot;E&quot;</span>) )
+lst match {
+  <span class="hljs-function"><span class="hljs-keyword">case</span> <span class="hljs-title">List</span><span class="hljs-params">(a@List(<span class="hljs-string">&quot;A&quot;</span>)</span>, x) </span>=&gt;
+    println(a)
+    println(x)
+  <span class="hljs-keyword">case</span> _ =&gt;
+    println(<span class="hljs-string">&quot;nothing&quot;</span>)
+  <span class="hljs-comment">// &#x30D1;&#x30BF;&#x30FC;&#x30F3;&#x306E;&#x524D;&#x306E;@&#x306F;&#x201D;as&#x30D1;&#x30BF;&#x30FC;&#x30F3;&#x201D;&#x3068;&#x547C;&#x3070;&#x308C;&#x308B;&#x3082;&#x306E;&#x3067;&#x3059;&#x3002;@&#x306E;&#x3042;&#x3068;&#x306B;&#x7D9A;&#x304F;&#x30D1;&#x30BF;&#x30FC;&#x30F3;&#x306B;&#x30DE;&#x30C3;&#x30C1;&#x3059;&#x308B;&#x5F0F;&#x3092;@&#x306E;&#x524D;&#x306E;&#x5909;&#x6570;&#x306B;&#x675F;&#x7E1B;&#x3057;&#x307E;&#x3059;&#x3002;</span>
+  <span class="hljs-comment">// |(&#x8907;&#x6570;&#x30DE;&#x30C3;&#x30C1;)&#x3092;&#x4F7F;&#x3063;&#x305F;&#x30D1;&#x30BF;&#x30FC;&#x30F3;&#x30DE;&#x30C3;&#x30C1;&#x306E;&#x5834;&#x5408;&#x306F;&#x5024;&#x3092;&#x53D6;&#x308A;&#x51FA;&#x3059;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x305B;&#x3093;&#x3002;</span>
+}
+</code></pre>
+<p>&#x5024;&#x304C;&#x7279;&#x5B9A;&#x306E;&#x578B;&#x306B;&#x6240;&#x5C5E;&#x3059;&#x308B;&#x5834;&#x5408;&#x306E;&#x307F;&#x30DE;&#x30C3;&#x30C1;&#x3059;&#x308B;&#x30D1;&#x30BF;&#x30FC;&#x30F3;&#x3082;&#x4F7F;&#x3046;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</p>
+<pre><code class="lang-Java">val obj: AnyRef = <span class="hljs-string">&quot;String Literal&quot;</span>
+obj match {
+  <span class="hljs-keyword">case</span> v: java.lang.Integer =&gt;
+    println(<span class="hljs-string">&quot;Integer&quot;</span>)
+  <span class="hljs-keyword">case</span> v: String =&gt;
+    println(v.toUpperCase(Locale.ENGLISH) )
+  <span class="hljs-comment">// AnyRef&#x578B;&#x306F;Java&#x306E;Object&#x578B;&#x306B;&#x76F8;&#x5F53;&#x3059;&#x308B;&#x578B;&#x3067;&#x3001;&#x3042;&#x3089;&#x3086;&#x308B;&#x53C2;&#x7167;&#x578B;&#x306E;&#x5024;&#x3092;AnyRef&#x578B;&#x306E;&#x5909;&#x6570;&#x306B;&#x683C;&#x7D0D;&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</span>
+  <span class="hljs-comment">// &#x578B;&#x3067;&#x30DE;&#x30C3;&#x30C1;&#x3057;&#x305F;&#x5024;&#x306F;&#x3001;&#x305D;&#x306E;&#x578B;&#x306B;&#x30AD;&#x30E3;&#x30B9;&#x30C8;&#x3057;&#x305F;&#x306E;&#x3068;&#x540C;&#x3058;&#x3088;&#x3046;&#x306B;&#x6271;&#x3046;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;</span>
+  <span class="hljs-comment">// &#x3057;&#x3070;&#x3057;&#x3070;&#x3001;Scala&#x3067;&#x306F;&#x30AD;&#x30E3;&#x30B9;&#x30C8;&#x306E;&#x4EE3;&#x308F;&#x308A;&#x306B;&#x30D1;&#x30BF;&#x30FC;&#x30F3;&#x30DE;&#x30C3;&#x30C1;&#x304C;&#x7528;&#x3044;&#x3089;&#x308C;&#x308B;&#x3053;&#x3068;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;</span>
+  <span class="hljs-comment">// &#x578B;&#x306E;&#x30D1;&#x30BF;&#x30FC;&#x30F3;&#x30DE;&#x30C3;&#x30C1;&#x3067;&#x306F;Scala&#x3092;&#x5B9F;&#x884C;&#x3059;&#x308B;JVM&#x306E;&#x5236;&#x7D04;&#x306B;&#x3088;&#x308A;&#x3001;&#x578B;&#x5909;&#x6570;&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;&#x3092;&#x4F7F;&#x3063;&#x305F;&#x5834;&#x5408;&#x306B;&#x6B63;&#x3057;&#x304F;&#x30D1;&#x30BF;&#x30FC;&#x30F3;&#x30DE;&#x30C3;&#x30C1;&#x304C;&#x884C;&#x308F;&#x308C;&#x307E;&#x305B;&#x3093;&#x3002;</span>
+  <span class="hljs-comment">// &#x578B;&#x5909;&#x6570;&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;&#x3092;&#x542B;&#x3080;&#x578B;&#x306E;&#x30D1;&#x30BF;&#x30FC;&#x30F3;&#x30DE;&#x30C3;&#x30C1;&#x306F;&#x30EF;&#x30A4;&#x30EB;&#x30C9;&#x30AB;&#x30FC;&#x30C9;&#x30D1;&#x30BF;&#x30FC;&#x30F3;&#x3092;&#x4F7F;&#x3046;&#x3088;&#x826F;&#x3044;&#x3067;&#x3059;&#x3002;</span>
+}
+</code></pre>
+<blockquote>
+<p>toUpperCase&#x306E;&#x5F15;&#x6570;&#x3067;&#x3042;&#x308B;Locale.ENGLISH&#x306F;&#x30A2;&#x30C3;&#x30D1;&#x30FC;&#x30B1;&#x30FC;&#x30B9;&#x306B;&#x5909;&#x63DB;&#x3059;&#x308B;&#x969B;&#x306E;&#x5909;&#x63DB;&#x5148;&#x306E;&#x8A00;&#x8A9E;&#x3092;&#x6307;&#x5B9A;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</p>
+<p>&#x5F15;&#x6570;&#x3092;&#x6307;&#x5B9A;&#x3057;&#x306A;&#x3044;&#x5834;&#x5408;&#x3001;&#x5909;&#x63DB;&#x5148;&#x306E;&#x8A00;&#x8A9E;&#x306F;&#x30E6;&#x30FC;&#x30B6;&#x306E;&#x8A00;&#x8A9E;&#x8A2D;&#x5B9A;&#x306B;&#x4F9D;&#x5B58;&#x3057;&#x307E;&#x3059;&#x3002;
+&#x4F9D;&#x5B58;&#x3092;&#x56DE;&#x907F;&#x3059;&#x308B;&#x305F;&#x3081;&#x306B;&#x3067;&#x304D;&#x308C;&#x3070;&#x6307;&#x5B9A;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;</p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="chapter4.html" class="navigation navigation-prev " aria-label="Previous page: Hello Scala World">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="chapter6.html" class="navigation navigation-next " aria-label="Next page: classとメソッドとフィールドとアクセス修飾子">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"構文と式と文","level":"1.6","depth":1,"next":{"title":"classとメソッドとフィールドとアクセス修飾子","level":"1.7","depth":1,"path":"chapter6.md","ref":"chapter6.md","articles":[]},"previous":{"title":"Hello Scala World","level":"1.5","depth":1,"path":"chapter4.md","ref":"chapter4.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["forkmegithub"],"pluginsConfig":{"forkmegithub":{"color":"gray","url":"https://github.com/iti-group/scala_newbie"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5.md","mtime":"2017-02-13T13:08:41.621Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-15T02:35:32.297Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-forkmegithub/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
